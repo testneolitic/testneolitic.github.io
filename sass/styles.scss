@@ -59,10 +59,10 @@ body {
 	}
 	/*TIMELINE*/
 	.row.timelines {
-	    position: absolute;
-	    bottom: 0;
+	    position: fixed;
+	    bottom: 4%;
 	    left: 50%;
-	    margin: 0 -25%;
+	    margin: 0 -35%;
 	}
 
 	.timeline{

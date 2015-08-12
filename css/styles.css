@@ -6099,10 +6099,10 @@ body {
       left: 0;
       display: none; }
   body .row.timelines {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 4%;
     left: 50%;
-    margin: 0 -25%; }
+    margin: 0 -35%; }
   body .timeline {
     height: 100px;
     bottom: 19px; }
