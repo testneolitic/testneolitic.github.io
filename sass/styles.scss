@@ -58,8 +58,14 @@ body {
 	    }
 	}
 	/*TIMELINE*/
+	.row.timelines {
+	    position: absolute;
+	    bottom: 0;
+	    left: 50%;
+	    margin: 0 -25%;
+	}
+
 	.timeline{
-		position: absolute;
 		height: 100px;
 		bottom: 19px;
 
@@ -67,33 +73,38 @@ body {
 		    background: url("../images/controls2.png") 0px -22px;
 		    width: 95px;
 		    height: 95px;
-		    display: inline-block;
-	        cursor: pointer;
+		    cursor: pointer;
+		    float: left;
 		}
 		div#line{
-			height: 95px;
-			display: inline-block;
+		    height: 95px;
+		    float: left;
 			background-color: $grey-color;
-			#line-back{
-				
-				width: 100%;
-				float: left;
-				.line-dates{
-					.date {
-					    float: left;
-					    margin: 0 5%;
-					    cursor: pointer;
+
+			.line-dates{
+				overflow: hidden;
+				.date {
+					float: left;
+					cursor: pointer;
+					height: 100px;
+					width: 171px;
+				    text-align: center;
+
+					&.current-date{
+					    background: url("../images/controls2.png") 329px -35px;
+    					width: 130px;
+					    font-weight: 700;
+    					font-size: 20px;
 					}
 				}
 			}
-			#current-date{}
 		}
 		div#arrow-right{
-	        background: url("../images/controls2.png") 200px -22px;
+		    background: url("../images/controls2.png") 200px -22px;
 		    width: 95px;
 		    height: 95px;
-		    display: inline-block;
-	        cursor: pointer;		
+		    cursor: pointer;
+		    float: left;		
 		}
 	}
 }

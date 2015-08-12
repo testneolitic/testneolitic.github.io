@@ -6098,33 +6098,43 @@ body {
       top: 0;
       left: 0;
       display: none; }
-  body .timeline {
+  body .row.timelines {
     position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 0 -25%; }
+  body .timeline {
     height: 100px;
     bottom: 19px; }
     body .timeline div#arrow-left {
       background: url("../images/controls2.png") 0px -22px;
       width: 95px;
       height: 95px;
-      display: inline-block;
-      cursor: pointer; }
+      cursor: pointer;
+      float: left; }
     body .timeline div#line {
       height: 95px;
-      display: inline-block;
+      float: left;
       background-color: #E2E2E2; }
-      body .timeline div#line #line-back {
-        width: 100%;
-        float: left; }
-        body .timeline div#line #line-back .line-dates .date {
+      body .timeline div#line .line-dates {
+        overflow: hidden; }
+        body .timeline div#line .line-dates .date {
           float: left;
-          margin: 0 5%;
-          cursor: pointer; }
+          cursor: pointer;
+          height: 100px;
+          width: 171px;
+          text-align: center; }
+          body .timeline div#line .line-dates .date.current-date {
+            background: url("../images/controls2.png") 329px -35px;
+            width: 130px;
+            font-weight: 700;
+            font-size: 20px; }
     body .timeline div#arrow-right {
       background: url("../images/controls2.png") 200px -22px;
       width: 95px;
       height: 95px;
-      display: inline-block;
-      cursor: pointer; }
+      cursor: pointer;
+      float: left; }
 
 @media (min-width: 1279px) {
   .container-fluid {

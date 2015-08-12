@@ -1,6 +1,6 @@
 (function($){
 
-	var currentDate = 4500;
+	var currentDate = 8500;
 
 	$('#arrow-left').on('click', function(){
 
