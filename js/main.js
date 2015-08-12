@@ -1,5 +1,7 @@
 (function($){
 
+	var currentDate = 4500;
+
 	$('#arrow-left').on('click', function(){
 
 	});
