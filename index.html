@@ -1,1 +1,63 @@
-<h1>n</h1>
+<!DOCTYPE html>
+<html lang="es-Es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Neolitic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+  </head>
+
+  
+<body>
+  <div class="container-fluid">
+      
+      <div class="row">
+      <div class="header">
+        <div class="close-button">[x]</div>
+        <div class="header-back">
+          <div class="header-title">
+            <h1>Arribada de Neolític a Catalunya</h1>
+          </div>
+        </div>
+      </div>
+    </div><!--row-->
+
+      <div class="row">
+        <div class="map">
+          <img src="images/mapa-turk.png" class="img-responsive" alt="">
+          <img src="images/8500.png" data-date="8500" class="img-responsive layer" alt="">
+          <img src="images/7800.png" data-date="7800" class="img-responsive layer" alt="">
+          <img src="images/4500.png" data-date="4500" class="img-responsive layer" alt="">
+        </div>
+      </div><!--row-->  
+
+
+
+      <div class="switch">
+          <div class="btn-group btn-toggle"> 
+            <button class="btn btn-xs btn-default">ON</button>
+            <button class="btn btn-xs btn-primary active">OFF</button>
+          </div>
+      </div>      
+
+      <div class="timeline">
+        <div id="arrow-left"></div>
+        <div id="line">
+          <div id="line-back">
+            <div class="line-dates">
+              <div class="date" data-date="4500">4500aC</div>
+              <div class="date" data-date="7800">7800aC</div>
+              <div class="date" data-date="8500">8500aC</div>
+            </div>
+          </div>
+          <div id="current-date"></div>
+        </div>
+        <div id="arrow-right"></div>
+      </div>  
+
+  </div><!--container -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

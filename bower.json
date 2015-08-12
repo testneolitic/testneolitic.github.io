@@ -1,0 +1,20 @@
+{
+  "name": "neolitic",
+  "version": "0.0.0",
+  "homepage": "https://github.com/testneolitic/testneolitic.github.io",
+  "authors": [
+    "alexvijo <alexvicentejose@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "normalize-scss": "~3.0.3"
+  }
+}
