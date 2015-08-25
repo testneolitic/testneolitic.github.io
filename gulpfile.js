@@ -1,37 +1,56 @@
+// npm install gulp  gulp-autoprefixer gulp-compass --save-dev
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var notify = require('gulp-notify');
-
+var prefix = require('gulp-autoprefixer');
+var compass  = require('gulp-compass');
 
 var paths = {
-  scripts: [
-  ],
+    styles: {
+        src: './sass',
+        files: 'sass/**/*.scss',
+        dest: './css'
+    }
+}
 
-  styles: [
-  	'sass/**/*.scss'
-  	
-  ]
+var displayError = function(error) {
+    var errorString = '[' + error.plugin + ']';
+    errorString += ' ' + error.message.replace("\n",''); // Removes new line at the end
 
-};
+    if(error.fileName)
+        errorString += ' in ' + error.fileName;
 
-gulp.task('styles', function() {
-  return gulp.src(paths.styles)
-		.pipe(sass({
-			includePaths: [
+    if(error.lineNumber)
+        errorString += ' on line ' + error.lineNumber;
 
-			]
-		}))
-		.pipe(gulp.dest('./css'))
-		.pipe(notify({ message: 'styles task complete' }));
+    console.error(errorString);
+}
+
+gulp.task('sass', function (){
+    gulp.src(paths.styles.files)
+    /*.pipe(sass({
+        outputStyle: 'compressed',
+        sourceComments: 'map',
+        includePaths : [paths.styles.src]
+    }))*/
+    .pipe(compass({
+           style: 'compressed',
+            css: 'css',
+            sass: 'sass'
+            //image: 'html/images'
+        }))
+    .on('error', function(err){
+        displayError(err);
+    })
+    .pipe(prefix(
+        'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
+    ))
+    .pipe(gulp.dest(paths.styles.dest))
 });
 
-
-gulp.task('watch', function() {
-	//gulp.watch(paths.scripts, ['scripts']);
-    gulp.watch(paths.styles, ['styles']);
-	//gulp.watch(paths.prints, ['prints']);
-});
-
-gulp.task('default', function() {
-	gulp.start('styles','watch');
+gulp.task('default', ['sass'], function() { 
+    gulp.watch(paths.styles.files, ['sass'])
+    .on('change', function(evt) {
+        console.log(
+            '[watcher] File ' + evt.path.replace(/.*(?=sass)/,'') + ' was ' + evt.type + ', compiling...'
+        );
+    });
 });
