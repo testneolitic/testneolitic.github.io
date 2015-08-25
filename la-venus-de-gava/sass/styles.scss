@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/*@import url('../bower_components/normalize-scss/_normalize-scss');*/
+
+@import '../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+
+* {
+	box-sizing: border-box; 
+}
+
+$red-color: #D20019;
+$grey-color: #E2E2E2;
+$grey-soft-color: #F3F3F3;
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #383838;
+	background-color: $grey-soft-color; 
+
+	.close-button {
+	    position: absolute;
+	    background-color: $red-color;
+        right: 0;
+    	top: 0;
+	}
+	
+	.header{
+		margin: 0 0 10px 0;
+	    background-color: $grey-color;
+        padding: 0 20px 20px 20px;
+        position: relative;
+		    
+	    .header-title {
+	    	background-color: #fff;
+
+	    	h1 {
+			    font-size: 20px;
+			    text-align: center;
+			    margin: 0;
+			    padding: 10px;
+			}
+		}
+	}
+
+	.map{
+		margin: 0 0 10px 0;
+		position: relative;
+	    img.layer{
+			position: absolute;
+		    top: 0;
+    		left: 0;
+    		display: none;
+	    }
+	    .plus{
+	    	position: absolute;
+			width: 5%;
+			height: auto;
+			&:hover{
+				cursor: pointer;
+			}
+	    }
+	    #info-1{
+		    top: 65%;
+		    left: 12%;
+	    }
+	    #info-2{
+		    top: 62%;
+		    left: 38%;
+	    }
+	    #info-3{
+		    top: 46%;
+		    left: 41%;
+	    }
+	    #info-4{
+		    top: 37%;
+		    left: 54%;
+	    }
+	    #info-5{
+		    top: 76%;
+		    left: 64%;
+	    }
+	    #info-6{
+		    top: 72%;
+		    left: 74%;
+	    }
+	    #info-7{
+		    top: 29%;
+		    left: 78%;
+	    }
+	    #info-8{
+		    top: 76%;
+		    left: 87%;
+	    }
+	}
+    
+
+}
+
+@media (min-width: 1279px) {
+  .container-fluid {
+    width: 1279px;
+  }
+}
+
