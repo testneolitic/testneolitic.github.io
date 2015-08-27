@@ -50,13 +50,17 @@ body{
 		background: $grey-hard;
 		height: 74px;
 		margin-bottom: 7px;
+	}
 
+	.head-title{
+		//margin-bottom: 7px;
 		.header-title {
-		    background-color: #fff;
-		    width: 50%;
+			position: relative;
+			background: $red;
 		    margin: 0 auto;
 		    text-align: center;
 		    .return{
+	    	    position: absolute;
 			    width: 2.1875em;
 			    float: left;
 			    @include box-shadow($red 0px 0px 14px);
@@ -64,9 +68,9 @@ body{
 		    h1{
 		    	font-size: 1.5em;
 		    	padding: 0.25em;
-		    	font-weight: 600;
+		    	font-weight: 400;
 	    	    margin: 0;
-	    	    color: $red;
+	    	    color: #fff;
 		    }
 		}
 	}

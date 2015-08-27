@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vida quotidiana al neolític</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    <link rel="stylesheet" href="bower_components/owl-carousel2/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="bower_components/owl-carousel2/dist/assets/owl.theme.default.min.css">
+  </head>
+
+  
+<body>
+<div class="header">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="close-button">[x]</div>
+        <div class="header-back">
+          <div class="header-title">
+            <h1>Vida quotidiana al neolític</h1>
+          </div>
+        </div>
+      </div><!--row-->    
+  </div>
+</div><!--header-->  
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="menu">
+          <ul>
+            <li class="selected">
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme">Agricultura i ramaderia</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme">El poblat</div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme"><a href="">La mineria</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme"><a href="">Les eines</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme"><a href="">L'ornamentació</a></div>
+              </div>
+            </li>
+            <li>
+              <div class="menu-item-list">
+                <div class="enter-button"><img src="images/icons/enter-button.png" class="img-responsive" alt=""></div>
+                <div class="theme"><a href="">La mort</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 col-md-8-col-lg-8">
+        <div class="frame">
+          <div id="carousel" class="owl-carousel owl-theme">
+              <div class="item-video" data-merge="3"><a class="owl-video" href="http://vimeo.com/23924346"></a></div>              
+              <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/64132853"></a></div>
+              <div class="item"><img src="images/carousel/agricultura.jpg" class="img-responsive" alt=""></div>
+              <div class="item"><img src="images/carousel/CICLADES.png" class="img-responsive" alt=""></div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!--row-->  
+  </div><!--container -->
+
+  <!--<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/owl-carousel2/dist/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var owl = $("#carousel");
+    owl.owlCarousel({
+        items:1,
+        merge:true,
+        loop:true,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        responsive:{
+            480:{
+                items:1
+            },
+            600:{
+                items:1
+            }
+        }
+    });
+  </script>
+  <style>
+    #carousel .owl-item{
+        color: #FFF;
+        text-align: center;
+    }
+  </style>
+</body>
+</html>

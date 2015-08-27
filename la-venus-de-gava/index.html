@@ -11,19 +11,20 @@
 
   
 <body>
+<div class="header">
   <div class="container-fluid">
-      
       <div class="row">
-      <div class="header">
         <div class="close-button">[x]</div>
         <div class="header-back">
           <div class="header-title">
             <h1>La Venus de Gavà</h1>
           </div>
         </div>
-      </div>
-    </div><!--row-->
+      </div><!--row-->    
+  </div>
+</div><!--header-->  
 
+  <div class="container-fluid">
     <div class="row">
       <div class="map">
         <img src="images/mapa-red.png" class="img-responsive" alt="">
@@ -68,25 +69,21 @@
     var owl = $("#carousel");
     owl.owlCarousel({
      
-      items : 7, //10 items above 1000px browser width
-      itemsDesktop : [1000,7], //5 items between 1000px and 901px
-      itemsDesktopSmall : [900,7], // betweem 900px and 601px
-      itemsTablet: [600,7], //2 items between 600 and 0
+      items : 10, //10 items above 1000px browser width
+      itemsDesktop : [1000,10], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,10], // betweem 900px and 601px
+      itemsTablet: [600,10], //2 items between 600 and 0
       itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
-
-      navigation : true
  
   });
   </script>
   <style>
-
     #carousel .owl-item{
         padding: 10px 0px;
         margin: 5px;
         color: #FFF;
         text-align: center;
     }
-    
   </style>
 </body>
 </html>

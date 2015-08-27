@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/*@import url('../bower_components/normalize-scss/_normalize-scss');*/
+
+@import '../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+
+* {
+	box-sizing: border-box; 
+}
+
+$red-color: #D20019;
+$grey-color: #E2E2E2;
+$grey-soft-color: #F3F3F3;
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #383838;
+	background-color: $grey-soft-color; 
+
+	.close-button {
+	    position: absolute;
+	    background-color: $red-color;
+        right: 0;
+    	top: 0;
+	}
+	
+	.header{
+	    background-color: #E2E2E2;
+	    position: relative;
+	    height: 74px;
+	    margin-bottom: 7px;
+		    
+	    .header-title {
+	    	background-color: #fff;
+
+	    	h1 {
+			    font-size: 20px;
+			    text-align: center;
+			    margin: 0;
+			    padding: 10px;
+			}
+		}
+	}
+	
+	.menu{
+		ul{
+			background-color: #fff;
+			padding: 2% 11%;
+			list-style: none;
+			li{
+				border-bottom: 2px solid grey;
+				height: 40px;
+				&.selected{
+					background-color: grey;
+					color: #fff;
+				}
+				.enter-button {
+					float: left;
+				    height: auto;
+				    width: 10%;
+				}
+				.theme{
+					float: left;
+				}
+			}	
+		}
+	}
+	.frame{
+		border: 20px solid #FF6633;
+		.owl-carousel .item-video{height:300px}
+		.owl-carousel .item{height:300px}
+	}
+    
+
+}
+
+@media (min-width: 1279px) {
+  .container-fluid {
+    width: 1279px;
+  }
+}
+
